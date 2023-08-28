@@ -6,3 +6,23 @@ document.addEventListener("keydown", function(e) {
         e.preventDefault();
     }
 });
+
+
+
+const imageElement = document.querySelector('.image');
+const newImageUrls = [
+  './images/AI.jpg',
+  './images/1.jpg',
+  './images/2.jpg',
+  './images/4.png',
+  './images/kurumi.jpg',
+  './images/kurumiNewY.jpg',
+
+];
+
+function randomizeImage() {
+  const randomImageUrl = newImageUrls[Math.floor(Math.random() * newImageUrls.length)];
+  imageElement.src = randomImageUrl;
+}
+
+window.onload = randomizeImage;
