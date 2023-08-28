@@ -1,0 +1,171 @@
+:root {
+    --yellow: rgb(212, 112, 6);
+    --blue: rgb(0, 253, 253);
+    --trueWhite: rgb(255, 255, 255);
+    --trueBlack: rgb(0, 0, 0);
+    --black-: rgb(47, 46, 45);
+    --black--: rgb(71, 70, 68);
+    --black---: var(--black---);
+    
+}
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+    font-family: 'Livvic','Livvic-Light', sans-serif;
+}
+body {
+    background-color:  var(--black-);
+}
+@font-face {
+    font-family: 'Livvic';
+    src: url('./font/Livvic-Light.ttf') format('truetype');
+    font-weight: 200;
+    font-style: italic;
+  }
+
+
+::selection {
+    background-color: var(--trueBlack);
+    color: var(--blue);
+  }
+#container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    overflow-y: hidden;
+
+    position: relative;
+}
+.left {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+
+    width: 40%;
+    height: 100%;
+    /* background-color: var(--yellow); */
+    background-image: linear-gradient(135deg, #c8510c 9%, #7f1c77 82%);
+    background-image: linear-gradient(135deg, #c70c91 9%, #0de2ea 88%);
+    /* display: flex;
+    align-items: center; */
+
+}
+
+
+
+
+.main {
+    height: 500px;
+    display: flex;
+    z-index: 2;
+    box-shadow: rgba(0, 216, 244, 0.638) 0px 5px 15px;
+
+    position: relative;
+}
+
+.image {
+    --ryo: 500px;
+    height: var(--ryo);
+    box-shadow: rgba(50, 50, 93, 0.5) 0px 50px 100px -20px, rgba(0, 0, 0, 0.5) 0px 30px 60px -30px, rgba(10, 37, 64, 0.4) 0px -2px 6px 0px inset;
+    cursor: none;
+}
+
+.content {
+    /* width: 100%; */
+    max-width: 430px;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(95, 93, 93);
+
+}
+
+.tittle {
+    padding: 10px 0;
+    background-color: var(--yellow);
+    text-align: center;
+
+}
+.fullname {
+    font-size: 50px;
+    color: var(--yellow);
+}
+.text-style {
+    padding: 10px 10px;
+    text-transform: uppercase;
+    color:var(--yellow);
+    font-weight: bold;
+    display: flex;
+}
+.fullname,
+.name,
+.series,
+.birthday,
+.height,
+.age,
+.season,
+.dicripsion {
+    padding-left: 15px;
+}
+
+.color-add {
+    color: var(--trueWhite);
+    display: flex;
+    width: max-content;
+}
+.series,
+.height,
+.season {
+    background-color: var(--black--);
+}
+
+.main::after {
+    content: 'Character Champions League Season!';
+
+    position: absolute;
+    bottom:0;
+    background-color: var(--trueWhite);
+    width: 100%;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 10px 0;
+    font-weight: bold;
+    color: var(--yellow);
+    cursor: none;
+}
+
+@media (max-width:767px) {
+
+    #container {
+        overflow-y: scroll;
+        height: unset;
+
+    }
+    .main {
+        padding: 20px 0 65px 0;
+        width: 90vw;
+        height: unset;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        box-shadow: unset;
+    }
+    .main::after {
+        margin-bottom: 10px;
+    }
+    .content {
+        max-width: unset;
+        width: 90vw;
+    }
+
+    .image {
+        width: 100%;
+        height: unset;
+        border-radius: 5px;
+    }
+}
