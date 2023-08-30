@@ -7,7 +7,10 @@ document.addEventListener("keydown", function(e) {
     }
 });
 
-
+document.addEventListener('contextmenu', function(event) {
+    event.preventDefault();
+    alert('>> Tokisaki Nino: "Say no to "Inspect" website!" :))');
+});
 
 const imageElement = document.querySelector('.image');
 const newImageUrls = [
