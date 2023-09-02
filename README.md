@@ -3,5 +3,6 @@
 > Reloading the site can change any image (Random).
 # 🍀 Preview 🍀
 <a align="right" href="https://nino.is-a.dev/" target="_blank">
-    <img align="center" width="auto" src="https://raw.githubusercontent.com/TokisakiNinoVn/CharacterChampionsLeague/main/images/preview.png"/>
+    <img align="center" width="auto" src="https://raw.githubusercontent.com/TokisakiNinoVn/CharacterChampionsLeague/main/preview.png"/>
 </a>
+
