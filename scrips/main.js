@@ -6,7 +6,13 @@ document.addEventListener("keydown", function(e) {
         e.preventDefault();
     }
 });
-
+window.addEventListener('keydown', function(event) {
+    if (event.key === 'F12' || event.keyCode === 123) {
+      alert('Access to website source code is not allowed!');
+      event.preventDefault();
+    }
+  });
+  
 document.addEventListener('contextmenu', function(event) {
     event.preventDefault();
     // alert('>> Tokisaki Nino: "Nói không với "Inspect" web nhé!"\n>> Github: TokisakiNinoVn.');
